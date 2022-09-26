@@ -2,16 +2,19 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import App from '../../src/App';
 
+const BrowserWrapper = (ui) => (<BrowserRouter>{ui}</BrowserRouter>)
+
+
 describe('App', () => {
     it('display app', () => {
-      cy.mount(<BrowserRouter><App /></BrowserRouter> )
+      cy.mount(BrowserWrapper(<App/>))
       cy.findByText('React cypress project').should('exist')
       cy.screenshot({overwrite: true})
     })
 
     describe('Navigate', () => {
       it('navigate to add', () => {
-        cy.mount(<BrowserRouter><App /></BrowserRouter> )
+        cy.mount(BrowserWrapper(<App/>))
   
         cy.findByText('go add').click()
   
@@ -20,7 +23,7 @@ describe('App', () => {
       })
   
       it('navigate home', () => {
-        cy.mount(<BrowserRouter><App /></BrowserRouter> )
+        cy.mount(BrowserWrapper(<App/>))
   
         cy.findByText('go home').click()
   
