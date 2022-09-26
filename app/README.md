@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# React cypress
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto de estudio de posibilidades de unit testing con cypress.
+
+Explorar la viabilidad de realizar desarrollos TDD.
 
 ## Available Scripts
 
