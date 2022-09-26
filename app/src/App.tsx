@@ -4,7 +4,12 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { Add } from './pages/Add';
 import { Home } from './pages/Home';
 
-
+const AppRoutes = () => {
+  return (<Routes>
+    <Route path="/add" element={<Add />} />
+    <Route path="/home" element={<Home />} />
+  </Routes>)
+}
 
 function App() {
   return (
@@ -18,10 +23,7 @@ function App() {
 
       </header>
 
-      <Routes>
-        <Route path="/add" element={<Add />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
+      <AppRoutes />
 
     </div>
   );
