@@ -1,2 +1,2 @@
 import React from 'react'
-export const Add = () => (<><label htmlFor='name'>Name</label> <input type="text" id="name"  /></>)
+export const Add = ({onUpdate}) => (<><label htmlFor='name'>Name</label> <input type="text" id="name" onChange={(event) => onUpdate(event.target.value)} /></>)

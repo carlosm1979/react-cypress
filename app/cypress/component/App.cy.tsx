@@ -9,7 +9,7 @@ describe('App', () => {
     it('display app', () => {
       cy.mount(BrowserWrapper(<App/>))
       cy.findByText('React cypress project').should('exist')
-      cy.screenshot({overwrite: true})
+      cy.screenshot()
     })
 
     describe('Navigate', () => {
@@ -19,7 +19,7 @@ describe('App', () => {
         cy.findByText('go add').click()
   
         cy.findByLabelText('Name').should('exist')
-        cy.screenshot({overwrite: true})
+        cy.screenshot()
       })
   
       it('navigate home', () => {
@@ -28,7 +28,7 @@ describe('App', () => {
         cy.findByText('go home').click()
   
         cy.findByRole('heading', {name: 'home'}).should('exist')
-        cy.screenshot({overwrite: true})
+        cy.screenshot()
       })
     })
 
