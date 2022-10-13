@@ -6,5 +6,5 @@ interface TodoListProps {
 }
 
 export const TodoList = ({items}: TodoListProps) => {
-    return (<>{items.map((i) => <>{i.caption}</>)}</>);
+    return (<>{items.map((i) => <div>{i.caption}</div>)}</>);
 };
