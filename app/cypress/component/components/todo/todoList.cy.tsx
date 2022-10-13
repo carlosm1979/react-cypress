@@ -1,12 +1,10 @@
 import React from 'react'
-import { createYield } from 'typescript'
 import {TodoList} from '../../../../src/components/todo/todoList'
 
 describe('TodoList', () => {
     describe('Desktop', () => {
         beforeEach(() => {
             cy.viewport(1024, 768)
-
         })
 
         it('display items when load', () => {
